@@ -6,7 +6,7 @@ require_relative 'bubble_sort'
 class BubbleSortTest < Minitest::Test
 
   def test_a_single_swap
-  sort = BubbleSort.new([2, 1])
+    sort = BubbleSort.new([2, 1])
     assert_equal [1, 2], sort.swap
   end
 
@@ -27,45 +27,7 @@ class BubbleSortTest < Minitest::Test
 
   def test_if_it_can_sort_a_longer_array
     sort = BubbleSort.new([5, 4, 3, 2, 1, 0])
-    assert_equal [0, 1, 2, 3, 4, 5], sort.execute
+    assert_equal [0, 1, 2, 3, 4, 5], sort.sorter_engine
   end
 
-  # def test_it_knows_it_is_done
-  #   sort = BubbleSort.new([1, 2])
-  #   assert_equal "Numbers sorted:\n[1, 2]", sort.sorter_engine
-  # end
-
-
 end
-
-
-
-
-
-
-# sequence = [5, 4, 3, 2, 1, 0]
-#
-# @swaps = 0
-#
-# num = 0
-#
-# while num + 1 < sequence.length
-#  if sequence[num] > sequence[num + 1]
-#  sequence[num], sequence[num + 1] = sequence[num + 1], sequence[num]
-#    @swaps += 1
-#    num = 0
-#  else
-#    num += 1
-#  end
-# result = sequence
-# end
-#
-#
-#
-# puts "Final result: #{result}"
-# puts "Swaps: #{@swaps}"
-
-#
-# def done
-#   puts "Numbers sorted:\n#{array}"
-# end
