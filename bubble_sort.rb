@@ -14,31 +14,31 @@ class BubbleSort
   end
 
   def swap
+    @index = 0
     array[index], array[index + 1] = array[index + 1], array[index]
   end
 
   def increase_index
     if index + 1 < array.length
-      index + 1
+      @index += 1
+    else
+      array
     end
   end
 
-  def done
-    puts "Numbers sorted:\n #{array}"
+  def sorter_engine
+    if diff?
+      swap
+      execute
+    elsif
+      increase_index
+      execute
+    end
   end
 
   def execute
-
-    if diff?
-      swap
-      increase_index
-      array
-    else
-      puts "Numbers sorted:\n #{array}"
-    end
+    sorter_engine
   end
-
-
 
 end
 
@@ -56,27 +56,3 @@ end
 
 
 
-
-
-
-# sequence = [5, 4, 3, 2, 1, 0]
-#
-# @swaps = 0
-#
-# num = 0
-#
-# while num + 1 < sequence.length
-#  if sequence[num] > sequence[num + 1]
-#  sequence[num], sequence[num + 1] = sequence[num + 1], sequence[num]
-#    @swaps += 1
-#    num = 0
-#  else
-#    num += 1
-#  end
-# result = sequence
-# end
-#
-#
-#
-# puts "Final result: #{result}"
-# puts "Swaps: #{@swaps}"
