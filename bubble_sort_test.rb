@@ -1,6 +1,6 @@
 gem 'minitest'
 require 'minitest/autorun'
-require 'minitest/pride'
+require 'minitest/emoji'
 require_relative 'bubble_sort'
 
 class BubbleSortTest < Minitest::Test
